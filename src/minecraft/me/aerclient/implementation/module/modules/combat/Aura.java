@@ -33,6 +33,30 @@ public class Aura extends Module {
 		List list = minecraft.world.playerEntities;
 		delay++;
 
+		if(crystals = true()) { // FIX THIS CODE THANK YOU, ALSO MADE BY VACCAT OMEGALUL
+			if(players.getObject()){
+
+				for(int k = 0; k < list.size(); k++){
+					if(((EntityPlayer) list.get(k)).getName() == minecraft.player.getName()){
+						continue;
+					}
+
+					EntityPlayer entityplayer = (EntityPlayer) list.get(1);
+
+					if(minecraft.player.getDistanceToEntity(endercrystal) > minecraft.player.getDistanceToEntity((Entity) list.get(k))){
+						entityplayer = (EntityPlayer) list.get(k);
+					}
+
+					float f = minecraft.player.getDistanceToEntity(endercrystal);
+
+					if(f < 4F && minecraft.player.canEntityBeSeen(endercrystal) && delay > kaDelay.getValue()){
+
+						Aimbot.faceEntity(endercrystal);
+						minecraft.playerController.attackEntity(minecraft.player, endercrystal);
+						minecraft.player.swingArm(EnumHand.MAIN_HAND);
+						delay = 0;
+						continue;
+		} // EVERYTHING BELOW NOT MINE BECAUSE IS NOT MINE YES KTHXBAI
 		if(aura.getObject()){
 			if(players.getObject()){
 
